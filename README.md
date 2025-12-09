@@ -1,32 +1,31 @@
 # Global Animal Explorer 🐾
 
-A fully English Streamlit app for GitHub + Streamlit Cloud.
+An all-English Streamlit app designed for GitHub + Streamlit Cloud.
+
+## Core Goals
+- **No Chinese text in the UI**
+- **Animal Name Explorer** shows image + popular-science info
+- **Image Animal Identifier** works **without any API key**
+- **Global coverage** via GBIF (millions of species)
 
 ## Features
 
-### ⭐ Featured Encyclopedia
-Curated representative animals by major categories.
+### ⭐ Featured Categories
+Curated representative animals across major groups.
 
-### ✅ Animal Name Tester (No API key required)
-- Matches against local Featured database
-- Supports aliases and some Chinese common names
-- Verifies using GBIF global search
+### 🔎 Animal Name Explorer (No API key)
+Type a name:
+- Finds a Featured match (common name / scientific name / aliases)
+- If no local match, validates via GBIF.
 
-Try:
-- Snowy Owl
-- Bubo scandiacus
-- 雪鸮 / 雪雕
-- Ferret / 雪貂
+### 🌍 Global Animal Encyclopedia (GBIF)
+Search the GBIF backbone taxonomy.
 
-### 🌍 Global Encyclopedia (GBIF)
-Search millions of species records worldwide.
-
-### 🧠 Image Identifier (Optional)
-High-accuracy image identification requires a valid
-**DashScope Model Studio API key**.
+### 🧠 Image Animal Identifier (No API key)
+Uses a lightweight onboard ImageNet classifier via ONNX.
+Best for general identification and animal group-level recognition.
 
 ## Run locally
-
 ```bash
 pip install -r requirements.txt
 streamlit run app.py
